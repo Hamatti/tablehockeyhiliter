@@ -4,3 +4,11 @@ chrome.browserAction.onClicked.addListener(function(activeTab) {
         file: "hilight.js"
     });
 });
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    chrome.storage.sync.get({
+        players: []
+    }, function(items) {
+        sendResponse({players: items.players});
+    });
+});

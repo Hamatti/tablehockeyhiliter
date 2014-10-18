@@ -5,34 +5,18 @@ function hilight(player){
 }
 
 function toggleHighlight() {
-    var players = [
-        "Jan Pelkonen",
-        "Janne Ollila",
-        "Antti Suojanen",
-        "Kevin Eriksson",
-        "Kristian Iso-Tryykäri",
-        "Kristian Iso-Tryykari",
-        "Janne Kantola",
-        "Rene Huhtala",
-        "Kimmo Eriksson",
-        "Mikko Haveri",
-        "Benjamin Suominen",
-        "Aleksi Eriksson",
-        "Raido Radin",
-        "Akseli Kuusela",
-        "Lauri Törnström",
-        "Sami Kattelus",
-        "Kaj Carlsson",
-        "Pekka Kattelus"
-        ];
-    if($('.tsup').length) {
-        $('.tsup').removeClass('tsup');
-    }
-    else {
-        players.forEach(function(p) {
-            hilight(p);
-        });
-    }
+    chrome.runtime.sendMessage({method: "getStatus"}, function(response) {
+        alert('caught');
+        var players = response.players;
+        if($('.tsup').length) {
+            $('.tsup').removeClass('tsup');
+        }
+        else {
+            players.forEach(function(p) {
+                hilight(p);
+            });
+        }
+    });
 }
 
 toggleHighlight();
