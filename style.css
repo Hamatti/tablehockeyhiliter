@@ -1,0 +1,8 @@
+table.tsup {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+tr.tsup {
+    background: rgb(12, 224, 12);
+}

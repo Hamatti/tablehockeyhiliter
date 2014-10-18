@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Table Hockey Hiliter",
+  "description": "Highlights wanted players on results",
+  "version": "1.1",
+
+  "permissions": [
+    "http://poytajaakiekko.net/tilastot/*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["jquery-2.1.1.min.js", "hilight.js"],
+      "matches": ["http://poytajaakiekko.net/tilastot/*"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
