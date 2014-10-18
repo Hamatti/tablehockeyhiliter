@@ -6,7 +6,6 @@ function hilight(player){
 
 function toggleHighlight() {
     chrome.runtime.sendMessage({method: "getStatus"}, function(response) {
-        alert('caught');
         var players = response.players;
         if($('.tsup').length) {
             $('.tsup').removeClass('tsup');
