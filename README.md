@@ -11,14 +11,16 @@ Installation
 4. Go to a results page (like [this](http://poytajaakiekko.net/tilastot/spol/live/147_Helsinki/147_helsinkiopen_basicgroups.tnmt.html))
 5. Click T icon
 
-Version 1.2
+Version history
 --
+**Version 1.3**
+* Allow all urls
+
+**Version 1.2**
 * Options page to define players
 * Highligt with green background
 * Toggle hilight instead of automatic
 
-Version 1.1
---
-
+**Version 1.1**
 * Highlights with bright green players who are hardcoded into `hilight.js`
 
