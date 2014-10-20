@@ -6,7 +6,7 @@
   "version": "1.2",
 
   "permissions": [
-    "http://poytajaakiekko.net/tilastot/*",
+    "http://*/*",
     "activeTab",
     "storage"
   ],
@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "js": ["jquery-2.1.1.min.js"],
-      "matches": ["http://poytajaakiekko.net/tilastot/*"],
+      "matches": ["http://*/*"],
       "css": ["style.css"],
       "run_at": "document_start"
     }
